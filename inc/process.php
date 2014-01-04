@@ -74,7 +74,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr>
 <td>♦신앙고백</td>
-<td><a title=\"신앙고백\" href=\"/service_sheet/sunday/creed\">사도신경</a></td>
+<td><a title=\"신앙고백\" href=\"/service_sheet/sunday/creed\">찬송가 1면</a></td>
 <td>다같이</td>
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
@@ -122,7 +122,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 <tr style=\"background-color: #e9e9e9;\">
 <td>♦축 도 </td>
 <td></td>
-<td>{$blesser}</td>
+<td><strong>{$blesser}</strong></td>
 </tr>
 </tbody>
 </table>
