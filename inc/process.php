@@ -34,6 +34,7 @@ function process_jk_youtube_options()
 	$ssong3 = trim(($_POST['lastSong']));
 
 	//check length of song numbers. If length < 3, add 0s to the start to get url value
+	
 	while (strlen($song1) < 3) {
 		$song1 = "0" . $song1;
 	}
@@ -48,7 +49,7 @@ function process_jk_youtube_options()
 
 $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$dateDay}일</p>
 
-<table style=\"text-align: left;\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><colgroup> <col style=\"width: 50%;\" /> <col style=\"width: 20%;\" /> <col style=\"width: 30%;\" /> </colgroup>
+<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><colgroup> <col style=\"width: 50%;\" /> <col style=\"width: 20%;\" /> <col style=\"width: 30%;\" /> </colgroup>
 <tbody>
 <tr>
 <td>1부 오전 9시30분<br />
@@ -60,7 +61,8 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tbody>
 </table>
 <br>
-<table style=\"text-align: center; height: 152px;\" width=\"100%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
+<table style=\"text-align: center; height: 152px, font-size:0.8em;\" width=\"90%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
+<colgroup> <col style=\"width: 30%;\" /> <col style=\"width: 40%;\" /> <col style=\"width: 30%;\" /> </colgroup>
 <tbody>
 <tr>
 <td>묵도</td>
@@ -69,7 +71,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>♦찬송</td>
-<td><a href=\"/content/hymn/{$song1}.jpg\">{$ssong1}장</a></td>
+<td><a href=\"/song.php?hymn={$song1}&day=sun\">{$ssong1}장</a></td>
 <td>다같이</td>
 </tr>
 <tr>
@@ -79,7 +81,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>찬송</td>
-<td><a href=\"/content/hymn/{$song2}.jpg\">{$ssong2}장</a></td>
+<td><a href=\"/song.php?hymn={$song2}&day=sun\">{$ssong2}장</a></td>
 <td>다같이</td>
 </tr>
 <tr>
@@ -96,7 +98,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr>
 <td>♦헌금봉독</td>
-<td><a href=\"/content/hymn/050.jpg\">50장</a></td>
+<td><a href=\"/song.php?hymn=50&day=sun\">50장</a></td>
 <td>다같이</td>
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
@@ -116,7 +118,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr>
 <td>♦찬송</td>
-<td><a href=\"/content/hymn/{$song3}.jpg\">{$ssong3}장</a></td>
+<td><a href=\"/song.php?hymn={$song3}&day=sun\">{$ssong3}장</a></td>
 <td>다같이</td>
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
@@ -130,7 +132,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 ♦ 표는 일어서 주십시오
 헌금은 들어오실 때 헌금함에 드립니다</p>
 
-<table style=\"text-align: left;\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
 <tbody>
 <tr>
 <td><a title=\"주보\" href=\"/service_sheet\">&lt;&lt; 주보</a></td>
@@ -218,7 +220,7 @@ function process_jk_youtube_options2()
 
 $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$dateDay}일</p>
 
-<table style=\"text-align: left;\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
 <tbody>
 <tr>
 <td>오후 7시30분</td>
@@ -227,7 +229,8 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tbody>
 </table>
 <br>
-<table style=\"text-align: center; height: 152px;\" width=\"100%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
+<table style=\"text-align: center; height: 152px;\" width=\"90%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
+<colgroup> <col style=\"width: 30%;\" /> <col style=\"width: 40%;\" /> <col style=\"width: 30%;\" /> </colgroup>
 <tbody>
 <tr>
 <td>묵도</td>
@@ -236,7 +239,7 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>찬송</td>
-<td><a href=\"/content/hymn/{$song1}.jpg\">{$ssong1}장</a> / <a href=\"/content/hymn/{$song2}.jpg\">{$ssong2}장</a></td>
+<td><a href=\"/song.php?hymn={$song1}&day=wed\">{$ssong1}장</a> / <a href=\"/song.php?hymn={$song2}&day=wed\">{$ssong2}장</a></td>
 <td>다같이</td>
 </tr>
 <tr>
@@ -261,7 +264,7 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tr>
 <tr>
 <td>찬송</td>
-<td><a href=\"/content/hymn/{$song3}.jpg\">{$ssong3}장</a></td>
+<td><a href=\"/song.php?hymn={$song3}&day=wed\">{$ssong3}장</a></td>
 <td>다같이</td>
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
@@ -272,7 +275,7 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tbody>
 </table>
 <br>
-<table style=\"text-align: left;\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
+<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
 <tbody>
 <tr>
 <td><a title=\"주보\" href=\"/service_sheet\">&lt;&lt; 주보</a></td>
@@ -357,7 +360,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 <em>다음주 : {$nextPBS}</em>
 
 </div>
-<table style=\"text-align: left;\" width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><colgroup> <col style=\"width: 33%;\" /> <col style=\"width: 33%;\" /> <col style=\"width: 33%;\" /> </colgroup>
+<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><colgroup> <col style=\"width: 33%;\" /> <col style=\"width: 33%;\" /> <col style=\"width: 33%;\" /> </colgroup>
 <tbody>
 <tr>
 <td><a title=\"주보\" href=\"/service_sheet\">주보</a></td>
