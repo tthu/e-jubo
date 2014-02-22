@@ -20,8 +20,8 @@ function process_jk_youtube_options()
 	$bible = ($_POST['bibleVerse']);
 	$preacher = ($_POST['preacher']);
 	$blesser = ($_POST['blessing']);
-
-
+	$testament = ($_POST['newold']);
+	$pagenum = '(p' . ($_POST['page']) . ')';
 
 
 	//get song numbers
@@ -49,19 +49,19 @@ function process_jk_youtube_options()
 
 $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$dateDay}일</p>
 
-<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><colgroup> <col style=\"width: 50%;\" /> <col style=\"width: 20%;\" /> <col style=\"width: 30%;\" /> </colgroup>
+<table style=\"text-align: left;\" width=\"90%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><colgroup> <colgroup> <col class=\"time\" /> <col class=\"mid\" /> <col class=\"reader\" /> </colgroup>
 <tbody>
 <tr>
 <td>1부 오전 9시30분<br />
 2부 오전 11시40분</td>
 <td style=\"text-align: right;\">사회: </td>
-<td>{$fReader}<br />
+<td style=\"text-align: right;\">{$fReader}<br />
 {$sReader}</td>
 </tr>
 </tbody>
 </table>
 <br>
-<table style=\"text-align: center; height: 152px, font-size:0.8em;\" width=\"90%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
+<table class = \"jubo\" style=\"text-align: center; height: 152px, font-size:0.8em;\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\">
 <colgroup> <col style=\"width: 30%;\" /> <col style=\"width: 40%;\" /> <col style=\"width: 30%;\" /> </colgroup>
 <tbody>
 <tr>
@@ -71,7 +71,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>♦찬송</td>
-<td><a href=\"/song.php?hymn={$song1}&day=sun\">{$ssong1}장</a></td>
+<td><a href=\"/song.php?hymn={$song1}&day=sun&hymn2={$song2}\">{$ssong1}장</a></td>
 <td>다같이</td>
 </tr>
 <tr>
@@ -93,12 +93,12 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>성경봉독</td>
-<td><a title=\"성경\" href=\"/service_sheet/sunday/sundaybible\">{$bible}</td>
+<td><a title=\"성경\" href=\"/service_sheet/sunday/sundaybible\">{$bible}<br />{$testament}{$pagenum}</td>
 <td>사회자</td>
 </tr>
 <tr>
 <td>♦헌금봉독</td>
-<td><a href=\"/song.php?hymn=50&day=sun\">50장</a></td>
+<td><a href=\"/song.php?hymn=050&day=sun\">50장</a></td>
 <td>다같이</td>
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
@@ -122,7 +122,7 @@ $pagestart="<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$da
 <td>다같이</td>
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
-<td>♦축 도 </td>
+<td>♦축도</td>
 <td></td>
 <td><strong>{$blesser}</strong></td>
 </tr>
@@ -196,6 +196,8 @@ function process_jk_youtube_options2()
 
 	$bible = ($_POST['wbibleVerse']);
 	$preacher = ($_POST['wpreacher']);
+        $testament = ($_POST['wnewold']);
+	$pagenum = '(p' . ($_POST['wpage']) . ')';
 
 	//get song numbers
 	$song1 = trim(($_POST['wfirstSong']));
@@ -229,7 +231,7 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tbody>
 </table>
 <br>
-<table style=\"text-align: center; height: 152px;\" width=\"90%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">
+<table class = \"jubo\" style=\"text-align: center; height: 152px;\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\">
 <colgroup> <col style=\"width: 30%;\" /> <col style=\"width: 40%;\" /> <col style=\"width: 30%;\" /> </colgroup>
 <tbody>
 <tr>
@@ -239,7 +241,7 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>찬송</td>
-<td><a href=\"/song.php?hymn={$song1}&day=wed\">{$ssong1}장</a> / <a href=\"/song.php?hymn={$song2}&day=wed\">{$ssong2}장</a></td>
+<td><a href=\"/song.php?hymn={$song1}&day=wed&hymn2={$song2}\">{$ssong1}장</a> / <a href=\"/song.php?hymn={$song2}&day=wed\">{$ssong2}장</a></td>
 <td>다같이</td>
 </tr>
 <tr>
@@ -249,7 +251,7 @@ $pagestart = "<p style=\"text-align: center;\">{$dateYear}년 {$dateMonth}월 {$
 </tr>
 <tr style=\"background-color: #e9e9e9;\">
 <td>성경봉독</td>
-<td><a title=\"성경(수요예배)\" href=\"/service_sheet/wednesday/wednesday_bible\">{$bible}</a></td>
+<td><a title=\"성경(수요예배)\" href=\"/service_sheet/wednesday/wednesday_bible\">{$bible}<br />{$testament}{$pagenum}</a></td>
 <td>사회자</td>
 </tr>
 <tr>

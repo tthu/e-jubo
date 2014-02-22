@@ -107,8 +107,11 @@ function jb_display_sunday()
             </tr>
             <tr>
                <td style="vertical-align: top;"><h3>성경</h3></td>
-               <td>         eg: <strong>누가복음 24장 44~48절(신약p141)</strong><br />
-         성경 Reading: <input type="text" name="bibleVerse" id="bibleVerse" size="55"/> <br>
+               <td>         eg: <strong>누가복음 24장 44~48절</strong><br />
+         성경 Reading: <input type="text" name="bibleVerse" id="bibleVerse" size="30"/> <br />
+	 <input type="radio" name="newold" id="newold" value="구약"> 구약<br />
+	 <input type="radio" name="newold" id="newold" value="신약"> 신약<br />
+	 Page: <input type="text" name="page" id="page" size="10"/> eg: <strong>141</strong><br />
                   Full Bible Text:<br />
          <textarea id="sun_bible_text" name="sun_bible_text" cols="80" rows="20"></textarea>
                </td>
@@ -249,8 +252,11 @@ function jb_display_wednesday()
                </tr>
                <tr>
                   <td style="vertical-align: top;"><h3>성경</h3></td>
-                  <td>eg: <strong>누가복음 24장 44~48절(신약p141)</strong><br />
-                  성경 Reading: <input type="text" name="wbibleVerse" id="wbibleVerse" size="55"/><br>
+                  <td>eg: <strong>누가복음 24장 44~48절</strong><br />
+                  성경 Reading: <input type="text" name="wbibleVerse" id="wbibleVerse" size="30"/><br>
+		    <input type="radio" name="wnewold" id="wnewold" value="구약"> 구약<br />
+		<input type="radio" name="wnewold" id="wnewold" value="신약"> 신약<br />
+		Page: <input type="text" name="wpage" id="wpage" size="10"/> eg: <strong>141</strong><br />
                   Full Bible Text:<br><textarea id="wed_bible_text" name="wed_bible_text" cols="80" rows="20"></textarea>
                   </td>
                </tr>
